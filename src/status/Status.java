@@ -26,8 +26,14 @@ public class Status {
     Scanner in =new Scanner(System.in);
     System.out.println("Enter the user status code (zero,one,two,three) in string");
     String code = in.next();
-    StausUser t= new StausUser();
-    t.statusDetail(code); 
+    
+    if(code.equalsIgnoreCase("four"))
+    {
+        StausUser t= new StausUser(code, "Completed");
+        System.out.println("New status " + t.Status +" has been created" );
+        //t.statusDetail(code); 
+    }
+    
     }
     
 }
